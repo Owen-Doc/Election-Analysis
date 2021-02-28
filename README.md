@@ -23,11 +23,11 @@ First, I would have to verify the data file before applying my program. I'd need
 
 One modification that I might make is if the election was extremely close, I would change some of my conditional checks to be "Greater than or equal to" instead of just greater than. In the event of a tie, my program would not accurately compute the overall winner. This can be seen in this block of code:
 
-'''
+```
 if county_vote > winning_county_voters and county_vote_percent > winning_percentage:
             largest_county_name = county_name
             winning_county_voters = county_vote
-'''
+```
 
 I also note that my program does not use any "50%" rule to determine the winner - which makes it useful for an election with multiple candidates. It only compares the total votes between all candidates and determines that the highest number of votes is the winner. In an election with a possible plurality, where no one achieves over 50% of the vote, this is a useful feature. However, I do note that there are some modifications I would make if there were, say 10 candidates in an election.
 
